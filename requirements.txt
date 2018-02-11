@@ -33,7 +33,6 @@ pyparsing==2.2.0
 pypl==40.10
 PyQt5==5.10
 python-dateutil==2.6.1
-pyttsx==1.2
 pytz==2017.2
 requests==2.18.4
 s3transfer==0.1.11
