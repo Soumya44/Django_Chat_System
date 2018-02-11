@@ -15,12 +15,12 @@ def create_msg(request):
         if msg == "":
             return HttpResponse(status=204)
         Message.objects.create(content=request.POST.get('message'))
-        return HttpResponse('ok')
+        return HttpResponseRedirect('/')
 
 
 def reset_session(request):
     Message.objects.all().delete()
-    return HttpResponse('ok')
+    return HttpResponseRedirect('/')
 
 
 
