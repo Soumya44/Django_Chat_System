@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+    <div id="wrapper" class="container-fluid">
+
+        <div class="container-fluid chat_wrapper">
+            <div class="brand">
+                <h1 align=center><a href="/about/" class="info" data-toggle="tooltip" data-placement="bottom" title="Real Time Chat System Designed by &copy; Soumya">Chat BOT</a></h1>
+            </div>
+            <div id="chat" class="chatdisplay">
+
+            	<div class="box">
+                    <p> Welcome To ChatBot. This is a Sample Chat System Designed by &copy;Soumya</p>
+                </div>
+                <div class="box" id="here">
+                    <p>It is built using Python, Django, HTML, CSS 3 and Bootstrap 4</p>
+                </div>
+                {% for msg in messages%}
+                <div class="box" id="here">
+                    <p>{{ msg.content }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <form id="ChatForm" method="post" action="/create_msg/">
+                {% csrf_token %}
+                <div class="form-group" id="form-submit">
+                    <input type="text" name="message" id="textfield" class="textarea" placeholder="Type a Message ..." autocomplete="off"></textarea>
+                    <a href="/reset/"><button type="button" class="btn btn-danger float-left resetbtn btn-md">Reset Session</button></a>
+                    <button id = "subbtn" class="btn btn-primary float-right sendbtn btn-md" type="submit">Send</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+{%endblock%}
