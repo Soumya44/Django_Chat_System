@@ -36,7 +36,6 @@ PyQt5==5.10
 python-dateutil==2.6.1
 pyttsx==1.2
 pytz==2017.2
-pywin32==222
 requests==2.18.4
 s3transfer==0.1.11
 scikit-learn==0.19.1
