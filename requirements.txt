@@ -30,7 +30,6 @@ psycopg2==2.7.3.1
 PyAudio==0.2.11
 pymongo==3.6.0
 pyparsing==2.2.0
-pypiwin32==222
 pypl==40.10
 PyQt5==5.10
 python-dateutil==2.6.1
